@@ -25,7 +25,7 @@ public class Gun : MonoBehaviour
         {
             if (_timer < 0)
             {
-                _timer++;
+                _timer = 1f;
                 GameObject.Instantiate(Prefab, transform.position, transform.rotation);
             }
         }
