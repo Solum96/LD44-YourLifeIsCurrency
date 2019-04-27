@@ -52,6 +52,8 @@ MonoBehaviour:
   - {fileID: 8644469096790071535, guid: a6d45046135d86045998c2f763d7d4b3, type: 3}
   Speed: {x: 16, y: 20}
   SpeedEase: 16
+  DestructionPrefab: {fileID: 7437157756826282920, guid: dd0650e61efe06a47bfd4106977c3fc1,
+    type: 3}
 --- !u!54 &1468633310147327252
 Rigidbody:
   m_ObjectHideFlags: 0

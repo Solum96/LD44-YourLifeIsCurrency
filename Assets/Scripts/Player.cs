@@ -6,6 +6,7 @@ public class Player : MonoBehaviour, IDamageDealer
     public Hull[] Hulls;
     public Vector2 Speed;
     public float SpeedEase = 10f;
+    public GameObject DestructionPrefab = null;
 
     Rigidbody _rb;
     Vector3 _rotation = Vector3.zero;
@@ -50,6 +51,10 @@ public class Player : MonoBehaviour, IDamageDealer
 
         if (Oxygen.CurrentOxygen <= 0f)
         {
+            if (DestructionPrefab != null)
+            {
+                GameObject.Instantiate(DestructionPrefab, transform.position, Quaternion.identity);
+            }
             GameObject.Destroy(gameObject);
         }
 
