@@ -35,6 +35,11 @@ public class Player : MonoBehaviour
 
         //Oxygen drop
         Oxygen.RemoveOxygen(Time.deltaTime * 0.04f);
+
+        if (Oxygen.CurrentOxygen <= 0f)
+        {
+            GameObject.Destroy(gameObject);
+        }
     }
 
     void OnCollisionEnter(Collision collision)

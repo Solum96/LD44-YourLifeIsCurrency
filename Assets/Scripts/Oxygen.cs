@@ -32,4 +32,8 @@ public class Oxygen : MonoBehaviour
         _oxygen -= value;
         _oxygen = Mathf.Clamp01(_oxygen);
     }
+    public static void ResetOxygen()
+    {
+        _oxygen = 1f;
+    }
 }
