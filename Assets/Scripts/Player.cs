@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageDealer
 {
     [HideInInspector] public Hull CurrentHull = null;
-
+    public float OxygenDamageMultiplier = 1f;
     public GameObject[] Hulls;
     public Vector2 Speed;
     public float SpeedEase = 10f;
@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     Vector3 _cameraOffset;
 
     Vector3 _movementVector;
+
+    public float Damage { get { return OxygenDamageMultiplier; } }
 
     void Start()
     {
@@ -67,7 +69,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        var oof = collision.gameObject.GetComponentInChildren<IPlayerOof>();
+        var oof = collision.gameObject.GetComponentInChildren<IDamageDealer>();
         if (oof != null)
         {
             var armorMultiplier = GetComponentInChildren<Hull>().ArmorMultiplier;

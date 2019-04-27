@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shot : MonoBehaviour, IPlayerOof
+public class Shot : MonoBehaviour, IDamageDealer
 {
     public float Speed = 1f;
     public float OxygenDamage;

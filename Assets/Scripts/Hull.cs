@@ -7,6 +7,7 @@ public class Hull : MonoBehaviour
     public float OxygenCost = 0.1f;
     public float ArmorMultiplier = 1f;
     public float Lifetime = 10f;
+    public float OxygenDamageMultiplier = 1f;
 
     float _lifeTimeTimer = 0f;
 
@@ -22,7 +23,7 @@ public class Hull : MonoBehaviour
         {
             if (isfiring)
             {
-                gun.StartFire();
+                gun.StartFire(OxygenDamageMultiplier);
             }
             else
             {

@@ -8,11 +8,12 @@ public class Gun : MonoBehaviour
     public float Rate;
     bool _isFiring;
     float _timer;
+    float _oxygenDamageMultiplier = 1f;
 
-    public void StartFire()
+    public void StartFire(float dmgMultiplier)
     {
         _isFiring = true;
-        //_timer = 0;
+        _oxygenDamageMultiplier = dmgMultiplier;
     }
     public void StopFire()
     {
@@ -26,7 +27,8 @@ public class Gun : MonoBehaviour
             if (_timer < 0)
             {
                 _timer = 1f;
-                GameObject.Instantiate(Prefab, transform.position, transform.rotation);
+                var shot = GameObject.Instantiate(Prefab, transform.position, transform.rotation).GetComponent<Shot>();
+                shot.OxygenDamage *= _oxygenDamageMultiplier;
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Enemy : MonoBehaviour, IPlayerOof 
+public class Enemy : MonoBehaviour, IDamageDealer
 {
     public float OxygenReward;
     public float OxygenDamage;
@@ -40,7 +40,11 @@ public class Enemy : MonoBehaviour, IPlayerOof
     }
     void OnCollisionEnter(Collision collision)
     {
-        Oxygen.AddOxygen(OxygenReward);
+        var damageDealer = collision.gameObject.GetComponentInChildren<IDamageDealer>();
+        if (damageDealer != null)
+        {
+            Oxygen.AddOxygen(OxygenReward * damageDealer.Damage);
+        }
         GameObject.Destroy(gameObject);
     }
 }
