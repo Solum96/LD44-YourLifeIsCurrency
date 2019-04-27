@@ -29,8 +29,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2503014445383306808}
   - {fileID: 24534504043842515}
+  - {fileID: 2503014445383306808}
   - {fileID: 3429387255788995770}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
   HullIndex: 0
   OxygenCost: 0.15
   ArmorMultiplier: 0.3
-  Lifetime: 10
+  Lifetime: 5
 --- !u!1 &4410281582736048552
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +90,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3949033714064346299}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &4634527338126122220
 MeshFilter:
@@ -183,7 +183,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3949033714064346299}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3197809302859228845
 MonoBehaviour:
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 4287934058348395188, guid: eda3a3d57a6e16a42839f2720f3b083e, type: 3}
-  Rate: 3
+  Rate: 2
 --- !u!1 &7138450436984299778
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,4 +243,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 4287934058348395188, guid: eda3a3d57a6e16a42839f2720f3b083e, type: 3}
-  Rate: 3
+  Rate: 2
