@@ -2,14 +2,17 @@
 
 public class Player : MonoBehaviour
 {
+    [HideInInspector] public Hull CurrentHull = null;
+
     public GameObject[] Hulls;
+    public Vector2 Speed;
+    public float SpeedEase = 10f;
 
-    public float Speed = 5f;
     Rigidbody _rb;
-    public Hull CurrentHull = null;
-
-    float _rotation = 0f;
+    Vector3 _rotation = Vector3.zero;
     Vector3 _cameraOffset;
+
+    Vector3 _movementVector;
 
     void Start()
     {
@@ -18,15 +21,19 @@ public class Player : MonoBehaviour
         _cameraOffset = Camera.main.transform.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //Movement och sånt
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
-        var movementVector = new Vector3(horizontal, 0, vertical).normalized;
-        var wantedPosition = transform.position + movementVector * Time.deltaTime * Speed;
-        _rb.MovePosition(GameBounds.ClampToBounds(wantedPosition));
+        _movementVector = Vector3.Lerp(_movementVector, new Vector3(horizontal, 0, vertical).normalized, Time.deltaTime * SpeedEase);
+        var moveVec = new Vector3(_movementVector.x * Speed.x, 0f, _movementVector.z * Speed.y);
+        var wantedPosition = GameBounds.ClampToBounds(_rb.position + (moveVec * Time.deltaTime));
+        _rb.MovePosition(Vector3.Lerp(_rb.position, wantedPosition, Time.deltaTime * SpeedEase));
+    }
 
+    void Update()
+    {
         // Fire
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -46,8 +53,15 @@ public class Player : MonoBehaviour
         }
 
         // Animate ship
-        _rotation = Mathf.Lerp(_rotation, horizontal, Time.deltaTime * 8f * (Mathf.Abs(horizontal) + 0.5f));
-        transform.localRotation = Quaternion.Euler(0f, 0f, -_rotation * 16f);
+        var horizontal = Input.GetAxis("Horizontal");
+        var vertical = Input.GetAxis("Vertical");
+        var wantedRotation = new Vector3(vertical * 8f, 0f, -horizontal * 16f);
+        _rotation = new Vector3(
+            Mathf.Lerp(_rotation.x, wantedRotation.x, Time.deltaTime * (Mathf.Abs(vertical) + 0.5f) * 16f),
+            0f,
+            Mathf.Lerp(_rotation.z, wantedRotation.z, Time.deltaTime * (Mathf.Abs(horizontal) + 0.5f) * 8f)
+        );
+        transform.localRotation = Quaternion.Euler(_rotation);
         Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, _cameraOffset + (transform.position * 0.05f), Time.deltaTime * 2f);
     }
 
