@@ -55,7 +55,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85610c9d643d47c41b8fb9773a3ab41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ArmorMultiplier: 1
+  HullIndex: 0
+  OxygenCost: 0.15
+  ArmorMultiplier: 0.3
+  Lifetime: 10
 --- !u!1 &4410281582736048552
 GameObject:
   m_ObjectHideFlags: 0

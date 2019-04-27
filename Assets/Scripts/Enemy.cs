@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IPlayerOof 
 {
     public float OxygenReward;
+    public float OxygenDamage;
     public Vector2 Speed;
     private Rigidbody _rb;
     float _difficulty = 0f;
     Hull _hull;
+
+    public float Damage { get { return OxygenDamage; } }
 
     void Awake()
     {

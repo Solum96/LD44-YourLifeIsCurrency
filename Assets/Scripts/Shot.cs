@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shot : MonoBehaviour
+public class Shot : MonoBehaviour, IPlayerOof
 {
     public float Speed = 1f;
+    public float OxygenDamage;
     private Rigidbody _rb;
+
+    public float Damage { get { return OxygenDamage; } }
 
     void Start()
     {

@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 4287934058348395188, guid: eda3a3d57a6e16a42839f2720f3b083e, type: 3}
-  Rate: 10
+  Rate: 8
 --- !u!1 &2922397425422191638
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,7 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85610c9d643d47c41b8fb9773a3ab41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ArmorMultiplier: 1
+  HullIndex: 0
+  OxygenCost: 0.1
+  ArmorMultiplier: 1.5
+  Lifetime: 10
 --- !u!1 &4410281582736048552
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,4 +243,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 4287934058348395188, guid: eda3a3d57a6e16a42839f2720f3b083e, type: 3}
-  Rate: 10
+  Rate: 8

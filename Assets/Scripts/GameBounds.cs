@@ -6,7 +6,7 @@ public static class GameBounds
     const float minBounds = -3f;
     const float maxBounds = 20f;
     const float playerMinBounds = 0;
-    const float playerMaxBounds = 5;
+    const float playerMaxBounds = 10;
 
     public static Vector3 ClampToBounds(Vector3 position)
     {

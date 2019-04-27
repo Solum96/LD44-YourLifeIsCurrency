@@ -44,8 +44,12 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        var armorMultiplier = GetComponentInChildren<Hull>().ArmorMultiplier;
-        Oxygen.RemoveOxygen(0.2f * armorMultiplier);
+        var oof = collision.gameObject.GetComponentInChildren<IPlayerOof>();
+        if (oof != null)
+        {
+            var armorMultiplier = GetComponentInChildren<Hull>().ArmorMultiplier;
+            Oxygen.RemoveOxygen(oof.Damage * armorMultiplier);
+        }
     }
 
     public void SwapHull(int index)
