@@ -5,6 +5,13 @@ public class Oxygen : MonoBehaviour
 {
     static float _oxygen = 1f;
     Image _progressbar;
+    public static float CurrentOxygen
+    {
+        get
+        {
+            return _oxygen;
+        }
+    }
 
 
     void Awake()
