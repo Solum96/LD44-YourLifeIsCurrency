@@ -728,6 +728,96 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyTime
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[3].time
+      value: 0.65379435
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[3].value
+      value: 0.74482054
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[3].inSlope
+      value: 1.3189529
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[3].outSlope
+      value: 1.3189529
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[3].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[3].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[4].time
+      value: 0.6883178
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[4].value
+      value: 0.5780143
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[4].inSlope
+      value: 0.3858837
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[4].outSlope
+      value: 0.3858837
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[4].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[4].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[5].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[5].value
+      value: 0.99765015
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[5].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045313382725924431, guid: 6aafd9b0ed19df9488ce479c36be21e0,
+        type: 3}
+      propertyPath: DifficultyCurve.m_Curve.Array.data[5].outSlope
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6aafd9b0ed19df9488ce479c36be21e0, type: 3}
 --- !u!1001 &1468633309959612029
