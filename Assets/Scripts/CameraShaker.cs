@@ -7,7 +7,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class CameraShake : MonoBehaviour
+public class CameraShaker : MonoBehaviour
 {
     public static Action<float, float> OnShake;
 

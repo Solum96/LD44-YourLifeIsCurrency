@@ -77,7 +77,10 @@ public class Player : MonoBehaviour, IDamageDealer
         if (oof != null)
         {
             var armorMultiplier = GetComponentInChildren<Hull>().ArmorMultiplier;
-            Oxygen.RemoveOxygen(oof.Damage * armorMultiplier);
+            var dmg = oof.Damage * armorMultiplier;
+            Oxygen.RemoveOxygen(dmg);
+
+            CameraShaker.Shake(dmg * 4f, dmg * 10f);
         }
     }
 
