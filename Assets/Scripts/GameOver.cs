@@ -19,6 +19,11 @@ public class GameOver : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 
             }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Oxygen.ResetOxygen();
+                SceneManager.LoadScene(0);
+            }
         }  
     }
 }
