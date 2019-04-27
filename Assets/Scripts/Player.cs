@@ -3,7 +3,7 @@
 public class Player : MonoBehaviour, IDamageDealer
 {
     [HideInInspector] public Hull CurrentHull = null;
-    public GameObject[] Hulls;
+    public Hull[] Hulls;
     public Vector2 Speed;
     public float SpeedEase = 10f;
 
@@ -92,5 +92,10 @@ public class Player : MonoBehaviour, IDamageDealer
     public int GetMaxHulls()
     {
         return Hulls.Length;
+    }
+
+    public Hull GetHull(int index)
+    {
+        return Hulls[index];
     }
 }

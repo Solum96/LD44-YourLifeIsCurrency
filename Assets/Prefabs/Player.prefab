@@ -46,10 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentHull: {fileID: 0}
   Hulls:
-  - {fileID: 2922397425422191638, guid: 7415e4e6ccbb08f45ad114e59cc88742, type: 3}
-  - {fileID: 2922397425422191638, guid: 50eb8b220f86cd347900abbc7a7b4059, type: 3}
-  - {fileID: 2922397425422191638, guid: 78958faa776516549a914e57b238bc1c, type: 3}
-  - {fileID: 2922397425422191638, guid: a6d45046135d86045998c2f763d7d4b3, type: 3}
+  - {fileID: 8644469096790071535, guid: 7415e4e6ccbb08f45ad114e59cc88742, type: 3}
+  - {fileID: 8644469096790071535, guid: 50eb8b220f86cd347900abbc7a7b4059, type: 3}
+  - {fileID: 8644469096790071535, guid: 78958faa776516549a914e57b238bc1c, type: 3}
+  - {fileID: 8644469096790071535, guid: a6d45046135d86045998c2f763d7d4b3, type: 3}
   Speed: {x: 16, y: 20}
   SpeedEase: 16
 --- !u!54 &1468633310147327252

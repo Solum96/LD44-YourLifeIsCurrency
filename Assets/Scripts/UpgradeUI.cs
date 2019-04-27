@@ -50,11 +50,19 @@ public class UpgradeUI : MonoBehaviour
                 SwapHull(0);
             }
         }
+
+        // Allow
+        for (var i = 1; i < Player.GetMaxHulls(); ++i)
+        {
+            var canAfford = CanAffordHud(i);
+            if (Player != null && Player.CurrentHull.HullIndex == i) { canAfford = true; }
+            _buttons[i].SetCanAfford(canAfford);
+        }
     }
 
     void SwapHull(int index)
     {
-        if (Player != null)
+        if (Player != null && CanAffordHud(index) && Player.CurrentHull.HullIndex != index)
         {
             Player.SwapHull(index);
             foreach (var btn in _buttons)
@@ -65,5 +73,15 @@ public class UpgradeUI : MonoBehaviour
                 }
             }
         }
+    }
+
+    bool CanAffordHud(int index)
+    {
+        if (Player != null)
+        {
+            var hull = Player.GetHull(index);
+            return Oxygen.CurrentOxygen > hull.OxygenCost;
+        }
+        return false;
     }
 }

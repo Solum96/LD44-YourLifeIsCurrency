@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 4648391061447015938}
   - component: {fileID: 8524861571572530665}
   - component: {fileID: 1701490167760802517}
+  - component: {fileID: 4921240264872840174}
   m_Layer: 5
   m_Name: Upgrade Item
   m_TagString: Untagged
@@ -244,5 +245,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161e113e7e5c11940b029cf2669cdad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainGroup: {fileID: 4921240264872840174}
   ProgressBar: {fileID: 3536865217515467930}
   Text: {fileID: 6090521408841800337}
+--- !u!225 &4921240264872840174
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100107603804395319}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
