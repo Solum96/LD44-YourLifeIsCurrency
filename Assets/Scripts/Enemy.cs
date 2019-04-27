@@ -6,10 +6,12 @@ public class Enemy : MonoBehaviour
     public Vector2 Speed;
     private Rigidbody _rb;
     float _difficulty = 0f;
+    Hull _hull;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _hull = GetComponent<Hull>();
     }
 
     public void SetDifficulty(float difficulty)
@@ -25,6 +27,8 @@ public class Enemy : MonoBehaviour
         {
             GameObject.Destroy(gameObject);
         }
+
+        //_hull.Fire(true); // TODO: FIRE
     }
     void OnCollisionEnter(Collision collision)
     {

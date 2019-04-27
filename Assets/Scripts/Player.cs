@@ -24,6 +24,16 @@ public class Player : MonoBehaviour
         var wantedPosition = transform.position + movementVector * Time.deltaTime * Speed;
         _rb.MovePosition(GameBounds.ClampToBounds(wantedPosition));
 
+        // Fire
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _currentHull.Fire(true);
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            _currentHull.Fire(false);
+        }
+
         //Oxygen drop
         Oxygen.RemoveOxygen(Time.deltaTime * 0.04f);
 

@@ -1,22 +1,11 @@
-﻿using UnityEngine;
-using System;
+﻿using System;
+using UnityEngine;
 
 public class Hull : MonoBehaviour
 {
-    
     public float ArmorMultiplier = 1f;
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            UpdateGuns(true);
-        }
-        else if (Input.GetKeyUp(KeyCode.Space))
-        {
-            UpdateGuns(false);
-        }
-    }
-    void UpdateGuns(bool isfiring)
+
+    public void Fire(bool isfiring)
     {
         var guns = GetComponentsInChildren<Gun>();
         foreach (var gun in guns)
@@ -31,5 +20,4 @@ public class Hull : MonoBehaviour
             }
         }
     }
-    
 }
