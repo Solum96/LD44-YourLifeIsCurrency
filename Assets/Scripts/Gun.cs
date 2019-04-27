@@ -12,7 +12,7 @@ public class Gun : MonoBehaviour
     public void StartFire()
     {
         _isFiring = true;
-        _timer = 0;
+        //_timer = 0;
     }
     public void StopFire()
     {
@@ -20,9 +20,9 @@ public class Gun : MonoBehaviour
     }
     void Update()
     {
+        _timer -= Time.deltaTime * Rate;
         if (_isFiring)
         {
-            _timer -= Time.deltaTime * Rate;
             if (_timer < 0)
             {
                 _timer++;
