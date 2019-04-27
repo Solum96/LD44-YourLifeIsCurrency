@@ -125,6 +125,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 15
   OxygenDamage: 0.08
+  DestructionPrefab: {fileID: 2662369629875140020, guid: 1dea174a1dd5d834c86dab8729e246de,
+    type: 3}
 --- !u!54 &4759324326432179505
 Rigidbody:
   m_ObjectHideFlags: 0

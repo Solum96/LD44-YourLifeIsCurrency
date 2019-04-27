@@ -8,6 +8,8 @@ public class Shot : MonoBehaviour, IDamageDealer
     public float OxygenDamage;
     private Rigidbody _rb;
 
+    public GameObject DestructionPrefab = null;
+
     public float Damage { get { return OxygenDamage; } }
 
     void Start()
@@ -26,5 +28,10 @@ public class Shot : MonoBehaviour, IDamageDealer
     void OnCollisionEnter(Collision collision)
     {
         GameObject.Destroy(gameObject);
+
+        if (DestructionPrefab != null)
+        {
+            GameObject.Instantiate(DestructionPrefab, transform.position, Quaternion.identity);
+        }
     }
 }

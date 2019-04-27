@@ -110,6 +110,8 @@ MonoBehaviour:
   OxygenReward: 0.05
   OxygenDamage: 0.15
   Speed: {x: 5, y: 10}
+  DestructionPrefab: {fileID: 7437157756826282920, guid: 421a8f715cccc1f4a996ba5b9ce74dc5,
+    type: 3}
 --- !u!54 &6266416221802118466
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -156,3 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb209cacfaba4144944d2facd79298f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnimationSpeed: {x: 16, y: 32}

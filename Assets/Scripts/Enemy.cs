@@ -5,7 +5,9 @@ public class Enemy : MonoBehaviour, IDamageDealer
     public float OxygenReward;
     public float OxygenDamage;
     public Vector2 Speed;
-    private Rigidbody _rb;
+    public GameObject DestructionPrefab = null;
+
+    Rigidbody _rb;
     float _difficulty = 0f;
     Hull _hull;
 
@@ -45,6 +47,12 @@ public class Enemy : MonoBehaviour, IDamageDealer
         {
             Oxygen.AddOxygen(OxygenReward * damageDealer.Damage);
         }
+
+        if (DestructionPrefab != null)
+        {
+            GameObject.Instantiate(DestructionPrefab, transform.position, Quaternion.identity);
+        }
+
         GameObject.Destroy(gameObject);
     }
 }
