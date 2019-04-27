@@ -58,6 +58,8 @@ MonoBehaviour:
   OxygenCost: 0.1
   ArmorMultiplier: 1
   Lifetime: 10
+  OxygenDamageMultiplier: 1
+  OxygenDamageMultiplierOnCollision: 0
 --- !u!1 &4410281582736048552
 GameObject:
   m_ObjectHideFlags: 0

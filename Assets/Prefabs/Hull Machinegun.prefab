@@ -102,8 +102,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HullIndex: 0
   OxygenCost: 0.4
-  ArmorMultiplier: 1.7
+  ArmorMultiplier: 1.5
   Lifetime: 6
+  OxygenDamageMultiplier: 0.37
+  OxygenDamageMultiplierOnCollision: 0
 --- !u!1 &4410281582736048552
 GameObject:
   m_ObjectHideFlags: 0
