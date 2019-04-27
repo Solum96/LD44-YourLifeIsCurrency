@@ -41,7 +41,7 @@ public class UpgradeUI : MonoBehaviour
         }
 
         // Update progress
-        if (Player.CurrentHull.HullIndex > 0)
+        if (Player != null && Player.CurrentHull.HullIndex > 0)
         {
             _buttons[Player.CurrentHull.HullIndex].SetProgress(Player.CurrentHull.GetLifetime());
 
@@ -54,12 +54,15 @@ public class UpgradeUI : MonoBehaviour
 
     void SwapHull(int index)
     {
-        Player.SwapHull(index);
-        foreach (var btn in _buttons)
+        if (Player != null)
         {
-            if (btn != null)
+            Player.SwapHull(index);
+            foreach (var btn in _buttons)
             {
-                btn.SetProgress(0);
+                if (btn != null)
+                {
+                    btn.SetProgress(0);
+                }
             }
         }
     }
