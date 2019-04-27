@@ -246,6 +246,8 @@ MonoBehaviour:
   Lifetime: 6
   OxygenDamageMultiplier: 0.3
   OxygenDamageMultiplierOnCollision: 0.25
+  IconSprite: {fileID: 1471034198686752998, guid: 05fc74324c4f0f24d92c187bdcc19d67,
+    type: 3}
 --- !u!1 &4327023142256320485
 GameObject:
   m_ObjectHideFlags: 0

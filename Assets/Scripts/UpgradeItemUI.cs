@@ -5,6 +5,7 @@ public class UpgradeItemUI : MonoBehaviour
 {
     public CanvasGroup MainGroup;
     public Image ProgressBar;
+    public Image Icon;
     public Text Text;
 
     public void SetText(string text)
@@ -20,5 +21,10 @@ public class UpgradeItemUI : MonoBehaviour
     public void SetCanAfford(bool canAfford)
     {
         MainGroup.alpha = canAfford ? 1f : 0.25f;
+    }
+
+    public void SetIcon(Sprite image)
+    {
+        Icon.sprite = image;
     }
 }

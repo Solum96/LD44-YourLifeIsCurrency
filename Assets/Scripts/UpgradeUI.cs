@@ -16,6 +16,7 @@ public class UpgradeUI : MonoBehaviour
             var btn = GameObject.Instantiate(ItemPrefab, transform).GetComponent<UpgradeItemUI>();
             btn.SetText((i + 1).ToString());
             btn.SetProgress(0);
+            btn.SetIcon(Player.GetHull(i + 1).IconSprite);
             _buttons.Add(btn);
         }
     }
