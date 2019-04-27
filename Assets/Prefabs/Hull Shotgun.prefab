@@ -243,8 +243,8 @@ MonoBehaviour:
   HullIndex: 0
   OxygenCost: 0.4
   ArmorMultiplier: 1
-  Lifetime: 7
-  OxygenDamageMultiplier: 0.5
+  Lifetime: 6
+  OxygenDamageMultiplier: 0.3
   OxygenDamageMultiplierOnCollision: 0.25
 --- !u!1 &4327023142256320485
 GameObject:
