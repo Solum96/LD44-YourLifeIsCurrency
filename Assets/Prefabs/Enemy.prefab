@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 1860703069096526511}
   - component: {fileID: 2349006991415674479}
   m_Layer: 10
-  m_Name: GameObject
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,5 +181,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44fe1d150c52cb41adf7d41a2a751b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 4287934058348395188, guid: eda3a3d57a6e16a42839f2720f3b083e, type: 3}
+  Prefab: {fileID: 4287934058348395188, guid: a6757e7be78ea0b4fa56a55611474a6f, type: 3}
   Rate: 1

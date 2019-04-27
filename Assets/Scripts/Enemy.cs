@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     float _difficulty = 0f;
     Hull _hull;
 
-    void Start()
+    void Awake()
     {
         _rb = GetComponent<Rigidbody>();
         _hull = GetComponent<Hull>();
@@ -17,6 +17,11 @@ public class Enemy : MonoBehaviour
     public void SetDifficulty(float difficulty)
     {
         _difficulty = difficulty;
+
+        if (_difficulty > 0.25f)
+        {
+            _hull.Fire(true);
+        }
     }
 
     void Update()
