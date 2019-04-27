@@ -110,6 +110,8 @@ MonoBehaviour:
   OxygenReward: 0.05
   OxygenDamage: 0.15
   Speed: {x: 5, y: 10}
+  DestructionPrefab: {fileID: 6366257501765572444, guid: 671b8b6a73159d3489148dd0a9698378,
+    type: 3}
 --- !u!54 &6266416221802118466
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -142,6 +144,9 @@ MonoBehaviour:
   OxygenCost: 0.1
   ArmorMultiplier: 1
   Lifetime: 10
+  OxygenDamageMultiplier: 1
+  OxygenDamageMultiplierOnCollision: 1
+  IconSprite: {fileID: 0}
 --- !u!1 &1826541027690873482
 GameObject:
   m_ObjectHideFlags: 0
