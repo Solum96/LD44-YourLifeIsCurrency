@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class Oxygen : MonoBehaviour
 {
-    public Player player;
+    static float _oxygen = 1f;
     Image _progressbar;
 
 
@@ -13,7 +13,16 @@ public class Oxygen : MonoBehaviour
     }
     void Update()
     {
-        _progressbar.fillAmount = player.Oxygen;
+        _progressbar.fillAmount = _oxygen;
     }
-    
+    public static void AddOxygen(float value)
+    {
+        _oxygen += value;
+        _oxygen = Mathf.Clamp01(_oxygen);
+    }
+    public static void RemoveOxygen(float value)
+    {
+        _oxygen -= value;
+        _oxygen = Mathf.Clamp01(_oxygen);
+    }
 }

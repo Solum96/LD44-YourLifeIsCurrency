@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Shot : MonoBehaviour
 {
-    public float OxygenReward;
     public float Speed = 1f;
     private Rigidbody _rb;
 
@@ -13,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        _rb.MovePosition(_rb.position+Vector3.back * Time.deltaTime * Speed);
+        _rb.MovePosition(_rb.position + transform.forward * Time.deltaTime * Speed);
         if (!GameBounds.IsWithinBounds(transform.position))
         {
             GameObject.Destroy(gameObject);
@@ -21,7 +22,6 @@ public class Enemy : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        Oxygen.AddOxygen(OxygenReward);
         GameObject.Destroy(gameObject);
     }
 }

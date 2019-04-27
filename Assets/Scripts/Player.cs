@@ -2,7 +2,6 @@
 
 public class Player : MonoBehaviour
 {
-    public float Oxygen = 1f;
     public float Speed = 5f;
     public Vector2 MovBounds;
     private Rigidbody _rb;
@@ -23,14 +22,16 @@ public class Player : MonoBehaviour
         _rb.MovePosition(GameBounds.ClampToBounds(wantedPosition));
 
         //Oxygen drop
-        Oxygen -= Time.deltaTime * 0.001f;
+        Oxygen.RemoveOxygen(Time.deltaTime * 0.04f);
 
         
     }
     void OnCollisionEnter(Collision collision)
     {
-        Oxygen -= 0.2f;
+        var armorMultiplier = GetComponentInChildren<Hull>().ArmorMultiplier;
+        Oxygen.RemoveOxygen(0.2f * armorMultiplier);
     }
+    
 
 
 }
