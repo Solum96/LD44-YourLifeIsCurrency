@@ -4,7 +4,9 @@ using UnityEngine.UI;
 public class Oxygen : MonoBehaviour
 {
     static float _oxygen = 1f;
-    Image _progressbar;
+
+    [SerializeField] Image _progressbar;
+
     public static float CurrentOxygen
     {
         get
@@ -13,11 +15,6 @@ public class Oxygen : MonoBehaviour
         }
     }
 
-
-    void Awake()
-    {
-        _progressbar = GetComponent<Image>();
-    }
     void Update()
     {
         _progressbar.fillAmount = _oxygen;

@@ -8,10 +8,14 @@ public class Player : MonoBehaviour
     Rigidbody _rb;
     public Hull CurrentHull = null;
 
+    float _rotation = 0f;
+    Vector3 _cameraOffset;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
         SwapHull(0);
+        _cameraOffset = Camera.main.transform.position;
     }
 
     void Update()
@@ -40,6 +44,11 @@ public class Player : MonoBehaviour
         {
             GameObject.Destroy(gameObject);
         }
+
+        // Animate ship
+        _rotation = Mathf.Lerp(_rotation, horizontal, Time.deltaTime * 8f * (Mathf.Abs(horizontal) + 0.5f));
+        transform.localRotation = Quaternion.Euler(0f, 0f, -_rotation * 16f);
+        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, _cameraOffset + (transform.position * 0.05f), Time.deltaTime * 2f);
     }
 
     void OnCollisionEnter(Collision collision)
