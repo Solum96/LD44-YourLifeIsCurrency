@@ -8,6 +8,7 @@ public class Hull : MonoBehaviour
     public float ArmorMultiplier = 1f;
     public float Lifetime = 10f;
     public float OxygenDamageMultiplier = 1f;
+    public float OxygenDamageMultiplierOnCollision = 1f;
 
     float _lifeTimeTimer = 0f;
 

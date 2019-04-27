@@ -3,7 +3,6 @@
 public class Player : MonoBehaviour, IDamageDealer
 {
     [HideInInspector] public Hull CurrentHull = null;
-    public float OxygenDamageMultiplier = 1f;
     public GameObject[] Hulls;
     public Vector2 Speed;
     public float SpeedEase = 10f;
@@ -14,7 +13,7 @@ public class Player : MonoBehaviour, IDamageDealer
 
     Vector3 _movementVector;
 
-    public float Damage { get { return OxygenDamageMultiplier; } }
+    public float Damage { get { return CurrentHull.OxygenDamageMultiplierOnCollision; } }
 
     void Start()
     {
