@@ -36,10 +36,12 @@ public class UpgradeUI : MonoBehaviour
         {
             SwapHull(3);
         }
+        /*
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             SwapHull(4);
         }
+        */
 
         // Update progress
         if (Player != null && Player.CurrentHull.HullIndex > 0)
