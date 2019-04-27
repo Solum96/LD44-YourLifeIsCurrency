@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
+    public Player Player;
     private Text _text;
     void Start()
     {
@@ -13,8 +14,10 @@ public class Score : MonoBehaviour
     float Timer = 0.0f;
     void Update()
     {
-        
-        Timer += Time.deltaTime; //Time.deltaTime will increase the value with 1 every second.
-        _text.text = Timer.ToString("0.00");
+        if (Player != null)
+        {
+            Timer += Time.deltaTime; //Time.deltaTime will increase the value with 1 every second.
+            _text.text = Timer.ToString("0.00");
+        }
     }
 }
