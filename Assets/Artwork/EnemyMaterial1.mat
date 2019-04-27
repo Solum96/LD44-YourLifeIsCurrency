@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EnemyMaterial
+  m_Name: EnemyMaterial1
   m_Shader: {fileID: 4800000, guid: 247f1e90d82b27249b8957eb165f8764, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -78,5 +78,5 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 1}
-    - _Color2: {r: 0.7264151, g: 0, b: 0.3742644, a: 1}
+    - _Color2: {r: 0.21492483, g: 0.7254902, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

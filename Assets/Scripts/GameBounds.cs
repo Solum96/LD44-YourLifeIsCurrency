@@ -2,9 +2,9 @@
 
 public static class GameBounds
 {
-    const float xBounds = 4.5f;
+    const float xBounds = 3.7f;
     const float minBounds = -3f;
-    const float maxBounds = 20f;
+    const float maxBounds = 32f;
     const float playerMinBounds = 0;
     const float playerMaxBounds = 10;
 
