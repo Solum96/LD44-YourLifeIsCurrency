@@ -6,8 +6,7 @@ public class Player : MonoBehaviour
 
     public float Speed = 5f;
     Rigidbody _rb;
-    Hull _currentHull = null;
-    int _currentHullIndex = 0;
+    public Hull CurrentHull = null;
 
     void Start()
     {
@@ -27,33 +26,15 @@ public class Player : MonoBehaviour
         // Fire
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            _currentHull.Fire(true);
+            CurrentHull.Fire(true);
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
-            _currentHull.Fire(false);
+            CurrentHull.Fire(false);
         }
 
         //Oxygen drop
         Oxygen.RemoveOxygen(Time.deltaTime * 0.04f);
-
-        // Sawp hull
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            SwapHull(1);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SwapHull(2);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            SwapHull(3);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            SwapHull(4);
-        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -62,15 +43,21 @@ public class Player : MonoBehaviour
         Oxygen.RemoveOxygen(0.2f * armorMultiplier);
     }
 
-    void SwapHull(int index)
+    public void SwapHull(int index)
     {
-        if (_currentHull != null)
+        if (CurrentHull != null)
         {
-            GameObject.Destroy(_currentHull.gameObject);
+            GameObject.Destroy(CurrentHull.gameObject);
         }
-        _currentHull = GameObject.Instantiate(Hulls[index], Vector3.zero, Quaternion.identity, transform).GetComponent<Hull>();
-        _currentHull.transform.localPosition = Vector3.zero;
-        _currentHull.transform.localRotation = Quaternion.identity;
-        _currentHullIndex = index;
+        CurrentHull = GameObject.Instantiate(Hulls[index], Vector3.zero, Quaternion.identity, transform).GetComponent<Hull>();
+        CurrentHull.transform.localPosition = Vector3.zero;
+        CurrentHull.transform.localRotation = Quaternion.identity;
+        CurrentHull.HullIndex = index;
+        Oxygen.RemoveOxygen(CurrentHull.OxygenCost);
+    }
+
+    public int GetMaxHulls()
+    {
+        return Hulls.Length;
     }
 }

@@ -3,7 +3,17 @@ using UnityEngine;
 
 public class Hull : MonoBehaviour
 {
+    [HideInInspector] public int HullIndex;
+    public float OxygenCost = 0.1f;
     public float ArmorMultiplier = 1f;
+    public float Lifetime = 10f;
+
+    float _lifeTimeTimer = 0f;
+
+    void Awake()
+    {
+        _lifeTimeTimer = Lifetime;
+    }
 
     public void Fire(bool isfiring)
     {
@@ -19,5 +29,15 @@ public class Hull : MonoBehaviour
                 gun.StopFire();
             }
         }
+    }
+
+    void Update()
+    {
+        _lifeTimeTimer -= Time.deltaTime;
+    }
+
+    public float GetLifetime()
+    {
+        return Mathf.Clamp01(_lifeTimeTimer / Lifetime);
     }
 }
