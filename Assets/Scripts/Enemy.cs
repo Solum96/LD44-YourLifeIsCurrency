@@ -3,17 +3,24 @@
 public class Enemy : MonoBehaviour
 {
     public float OxygenReward;
-    public float Speed = 1f;
+    public Vector2 Speed;
     private Rigidbody _rb;
+    float _difficulty = 0f;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
     }
 
+    public void SetDifficulty(float difficulty)
+    {
+        _difficulty = difficulty;
+    }
+
     void Update()
     {
-        _rb.MovePosition(_rb.position+Vector3.back * Time.deltaTime * Speed);
+        var speed = Mathf.Lerp(Speed.x, Speed.y, _difficulty);
+        _rb.MovePosition(_rb.position + Vector3.back * Time.deltaTime * speed);
         if (!GameBounds.IsWithinBounds(transform.position))
         {
             GameObject.Destroy(gameObject);

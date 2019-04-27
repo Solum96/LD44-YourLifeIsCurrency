@@ -3,15 +3,25 @@
 public class EnemyManager : MonoBehaviour
 {
     public GameObject Prefab;
+    public Vector2 SpawnTimer;
+    public float DifficultyTime = 30f;
+    public AnimationCurve DifficultyCurve;
 
-    void Start()
-    {
-        InvokeRepeating("Spawn", 1, 5);
-    }
+    float _difficultyTimer = 0;
+    float _timer;
 
-    // Update is called once per frame
-    void Spawn()
+    void Update()
     {
-        GameObject.Instantiate(Prefab,GameBounds.GetRandomSpawnPosition(), Quaternion.identity, transform);
+        _difficultyTimer += Time.deltaTime / DifficultyTime;
+
+        _timer -= Time.deltaTime;
+        if (_timer < 0)
+        {
+            var curveValue = DifficultyCurve.Evaluate(_difficultyTimer);
+            var spawnTimer = Mathf.Lerp(SpawnTimer.x, SpawnTimer.y, curveValue);
+            _timer = 1f / spawnTimer;
+            var enemy = GameObject.Instantiate(Prefab, GameBounds.GetRandomSpawnPosition(), Quaternion.identity, transform).GetComponent<Enemy>();
+            enemy.SetDifficulty(curveValue);
+        }
     }
 }
