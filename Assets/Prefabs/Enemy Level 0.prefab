@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OxygenReward: 0.05
-  OxygenDamage: 0.15
+  OxygenDamage: 0.2
   Speed: {x: 5, y: 10}
   DestructionPrefab: {fileID: 7437157756826282920, guid: 421a8f715cccc1f4a996ba5b9ce74dc5,
     type: 3}
@@ -146,6 +146,7 @@ MonoBehaviour:
   Lifetime: 10
   OxygenDamageMultiplier: 1
   OxygenDamageMultiplierOnCollision: 1
+  IconSprite: {fileID: 0}
 --- !u!114 &304836477555479385
 MonoBehaviour:
   m_ObjectHideFlags: 0

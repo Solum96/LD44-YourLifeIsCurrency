@@ -107,8 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dba8d74f460c1ed469a359467c14fe80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OxygenReward: 0.1
-  OxygenDamage: 0.17
+  OxygenReward: 0.15
+  OxygenDamage: 0.35
   Speed: {x: 5, y: 10}
   DestructionPrefab: {fileID: 6366257501765572444, guid: 9eae0e4959fffb9419554b63283ac66a,
     type: 3}

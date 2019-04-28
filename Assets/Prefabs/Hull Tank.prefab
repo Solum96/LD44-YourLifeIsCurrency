@@ -59,10 +59,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HullIndex: 0
   OxygenCost: 0.15
-  ArmorMultiplier: 0.3
-  Lifetime: 5
-  OxygenDamageMultiplier: 0.5
-  OxygenDamageMultiplierOnCollision: 2.5
+  ArmorMultiplier: 0.1
+  Lifetime: 10
+  OxygenDamageMultiplier: 0.2
+  OxygenDamageMultiplierOnCollision: 0
   IconSprite: {fileID: -3152102132656576814, guid: 05fc74324c4f0f24d92c187bdcc19d67,
     type: 3}
 --- !u!1 &4410281582736048552
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 4287934058348395188, guid: eda3a3d57a6e16a42839f2720f3b083e, type: 3}
-  Rate: 2
+  Rate: 1.85
 --- !u!1 &7138450436984299778
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 4287934058348395188, guid: eda3a3d57a6e16a42839f2720f3b083e, type: 3}
-  Rate: 2
+  Rate: 1.85
 --- !u!1001 &3165704338626029827
 PrefabInstance:
   m_ObjectHideFlags: 0

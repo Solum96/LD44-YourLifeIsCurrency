@@ -37,6 +37,7 @@ public class Hull : MonoBehaviour
     void Update()
     {
         _lifeTimeTimer -= Time.deltaTime;
+        
     }
 
     public float GetLifetime()

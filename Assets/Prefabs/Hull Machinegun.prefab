@@ -102,10 +102,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HullIndex: 0
-  OxygenCost: 0.4
+  OxygenCost: 0.3
   ArmorMultiplier: 1.5
   Lifetime: 6
-  OxygenDamageMultiplier: 0.37
+  OxygenDamageMultiplier: 0.33
   OxygenDamageMultiplierOnCollision: 0
   IconSprite: {fileID: 3666008637670741229, guid: 05fc74324c4f0f24d92c187bdcc19d67,
     type: 3}

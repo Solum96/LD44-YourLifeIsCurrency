@@ -60,8 +60,9 @@ MonoBehaviour:
   OxygenCost: 0.1
   ArmorMultiplier: 1
   Lifetime: 10
-  OxygenDamageMultiplier: 1
+  OxygenDamageMultiplier: 0.5
   OxygenDamageMultiplierOnCollision: 0
+  OxygenOverTime: 0.1
   IconSprite: {fileID: 0}
 --- !u!1 &4410281582736048552
 GameObject:
@@ -202,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 4287934058348395188, guid: eda3a3d57a6e16a42839f2720f3b083e, type: 3}
-  Rate: 3
+  Rate: 2.5
 --- !u!1001 &3732414967391434740
 PrefabInstance:
   m_ObjectHideFlags: 0
